@@ -4,8 +4,17 @@
 
 #include "fft.h"
 
+// Poat A
+#if defined(ARDUINO_M5STACK_Grey)
+#define PIN_CLK 22
+#define PIN_DATA 21
+#elif defined(ARDUINO_M5STACK_Core2)
+#define PIN_CLK 33
+#define PIN_DATA 32
+#elif defined(ARDUINO_M5STACK_CoreS3)
 #define PIN_CLK 1
 #define PIN_DATA 2
+#endif
 
 #define MODE_MIC 0
 
